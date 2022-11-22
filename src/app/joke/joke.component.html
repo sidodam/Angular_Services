@@ -1,0 +1,30 @@
+<div class="w-1/2 m-auto">
+  <div class="rounded ">
+    <div class="rounded shadow-lg">
+      <div class="px-6 py-4 ">
+        <p class="text-gray-700 text-center">
+          {{ jokee.punchline | censored:"damn hell crap police" }}
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2 text-center">
+        <div class="my-5">
+          <button class="bg-blue-600 rounded px-4 py-2" (click)="jokee.hidden = !jokee.hidden">
+            😎
+          </button>
+
+          <div class="{{ jokee.hidden ? 'hidden' : 'text-[#ff0000]' }}">
+            {{ jokee.jokePlot }}
+          </div>
+
+        </div>
+
+        <button (click)="TargetedJoke(jokee.punchline , jokee.jokePlot )" class="bg-red-600 rounded px-4 py-2">
+          🗑️
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
